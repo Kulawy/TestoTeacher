@@ -84,6 +84,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "MENU";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // checkedListBox_answers
             // 
@@ -121,6 +122,7 @@
             this.Controls.Add(this.label_tittle);
             this.Name = "QuizWindow";
             this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuizWindow";
             this.ResumeLayout(false);
             this.PerformLayout();

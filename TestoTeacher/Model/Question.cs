@@ -19,6 +19,17 @@ namespace TestoTeacher.Model
             answersList = new List<Answer>();
         }
 
+        public bool AddAnswer(string answer, bool isCorrect)
+        {
+            if (answer != null)
+            {
+                answersList.Add(new Answer(answer, isCorrect));
+                return true;
+            }
+            else
+                return false;
+
+        }
 
 
     }

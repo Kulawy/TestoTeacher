@@ -74,21 +74,25 @@
             // 
             // button_resume
             // 
-            this.button_resume.Location = new System.Drawing.Point(22, 384);
+            this.button_resume.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_resume.Location = new System.Drawing.Point(22, 389);
             this.button_resume.Name = "button_resume";
-            this.button_resume.Size = new System.Drawing.Size(185, 23);
+            this.button_resume.Size = new System.Drawing.Size(185, 40);
             this.button_resume.TabIndex = 3;
-            this.button_resume.Text = "Resume";
+            this.button_resume.Text = "RESUME";
             this.button_resume.UseVisualStyleBackColor = true;
+            this.button_resume.Click += new System.EventHandler(this.button_resume_Click);
             // 
             // buton_start
             // 
-            this.buton_start.Location = new System.Drawing.Point(226, 384);
+            this.buton_start.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buton_start.Location = new System.Drawing.Point(226, 389);
             this.buton_start.Name = "buton_start";
-            this.buton_start.Size = new System.Drawing.Size(200, 23);
+            this.buton_start.Size = new System.Drawing.Size(200, 40);
             this.buton_start.TabIndex = 4;
-            this.buton_start.Text = "Start";
+            this.buton_start.Text = "START";
             this.buton_start.UseVisualStyleBackColor = true;
+            this.buton_start.Click += new System.EventHandler(this.buton_start_Click);
             // 
             // loadFile_label
             // 
@@ -107,8 +111,8 @@
             this.label_fileTemplate.Padding = new System.Windows.Forms.Padding(5);
             this.label_fileTemplate.Size = new System.Drawing.Size(360, 153);
             this.label_fileTemplate.TabIndex = 6;
-            this.label_fileTemplate.Text = "How files need to look like:\n1. Question content\na)Answer_+\nb)Answer\nc)Answer_+\nd" +
-    ")Answer\n_+ :means good anser\nFile also need to be .txt file";
+            this.label_fileTemplate.Text = "How files need to look like:\r\nQ* Question content\r\na* Answer_+\r\nb* Answer\r\nc* Ans" +
+    "wer_+\r\nd* Answer\r\n...\r\n_+ :means good anser\r\nFile also need to be .txt file";
             // 
             // textBox_repNumber
             // 
@@ -116,6 +120,8 @@
             this.textBox_repNumber.Name = "textBox_repNumber";
             this.textBox_repNumber.Size = new System.Drawing.Size(34, 24);
             this.textBox_repNumber.TabIndex = 7;
+            this.textBox_repNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_repNumber.TextChanged += new System.EventHandler(this.textBox_repNumber_TextChanged);
             // 
             // textBox_repWrongNumber
             // 
@@ -123,6 +129,8 @@
             this.textBox_repWrongNumber.Name = "textBox_repWrongNumber";
             this.textBox_repWrongNumber.Size = new System.Drawing.Size(34, 24);
             this.textBox_repWrongNumber.TabIndex = 8;
+            this.textBox_repWrongNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_repWrongNumber.TextChanged += new System.EventHandler(this.textBox_repWrongNumber_TextChanged);
             // 
             // label_instructions
             // 
@@ -147,6 +155,8 @@
             // 
             // textBox_fileName
             // 
+            this.textBox_fileName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.textBox_fileName.Enabled = false;
             this.textBox_fileName.Location = new System.Drawing.Point(528, 269);
             this.textBox_fileName.Name = "textBox_fileName";
             this.textBox_fileName.Size = new System.Drawing.Size(264, 24);
@@ -154,6 +164,8 @@
             // 
             // textBox_adres
             // 
+            this.textBox_adres.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.textBox_adres.Enabled = false;
             this.textBox_adres.Location = new System.Drawing.Point(446, 300);
             this.textBox_adres.Name = "textBox_adres";
             this.textBox_adres.Size = new System.Drawing.Size(346, 24);

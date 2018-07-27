@@ -12,9 +12,19 @@ namespace TestoTeacher.View
 {
     public partial class QuizWindow : Form
     {
-        public QuizWindow()
+
+        public MainMenuWindow mainMenu { get; set; }
+
+        public QuizWindow(MainMenuWindow menuContext)
         {
             InitializeComponent();
+            mainMenu = menuContext;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainMenu.Show();
         }
     }
 }
