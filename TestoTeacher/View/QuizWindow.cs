@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestoTeacher
+namespace TestoTeacher.View
 {
-    public partial class MainMenu : Form
+    public partial class QuizWindow : Form
     {
-        public MainMenu()
+        public QuizWindow()
         {
             InitializeComponent();
         }
