@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.label_tittle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label_titleQuestion = new System.Windows.Forms.Label();
+            this.label_question = new System.Windows.Forms.Label();
+            this.button_ok = new System.Windows.Forms.Button();
+            this.button_menu = new System.Windows.Forms.Button();
             this.checkedListBox_answers = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_answersTitle = new System.Windows.Forms.Label();
+            this.label_reps = new System.Windows.Forms.Label();
+            this.label_repetitions = new System.Windows.Forms.Label();
+            this.label_correct_all = new System.Windows.Forms.Label();
+            this.label_score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_tittle
@@ -47,44 +51,45 @@
             this.label_tittle.TabIndex = 0;
             this.label_tittle.Text = "Quiz";
             // 
-            // label1
+            // label_titleQuestion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(23, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Question:";
+            this.label_titleQuestion.AutoSize = true;
+            this.label_titleQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_titleQuestion.Location = new System.Drawing.Point(23, 91);
+            this.label_titleQuestion.Name = "label_titleQuestion";
+            this.label_titleQuestion.Size = new System.Drawing.Size(72, 18);
+            this.label_titleQuestion.TabIndex = 1;
+            this.label_titleQuestion.Text = "Question:";
             // 
-            // label2
+            // label_question
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(101, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(690, 70);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Some sample question";
+            this.label_question.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_question.Location = new System.Drawing.Point(101, 87);
+            this.label_question.Name = "label_question";
+            this.label_question.Size = new System.Drawing.Size(690, 70);
+            this.label_question.TabIndex = 2;
+            this.label_question.Text = "Some sample question";
             // 
-            // button1
+            // button_ok
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(23, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 39);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_ok.Location = new System.Drawing.Point(23, 380);
+            this.button_ok.Name = "button_ok";
+            this.button_ok.Size = new System.Drawing.Size(55, 39);
+            this.button_ok.TabIndex = 4;
+            this.button_ok.Text = "OK";
+            this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
-            // button3
+            // button_menu
             // 
-            this.button3.Location = new System.Drawing.Point(723, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "MENU";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_menu.Location = new System.Drawing.Point(723, 13);
+            this.button_menu.Name = "button_menu";
+            this.button_menu.Size = new System.Drawing.Size(68, 35);
+            this.button_menu.TabIndex = 6;
+            this.button_menu.Text = "MENU";
+            this.button_menu.UseVisualStyleBackColor = true;
+            this.button_menu.Click += new System.EventHandler(this.button_menu_Click);
             // 
             // checkedListBox_answers
             // 
@@ -97,15 +102,57 @@
             this.checkedListBox_answers.Size = new System.Drawing.Size(690, 255);
             this.checkedListBox_answers.TabIndex = 7;
             // 
-            // label3
+            // label_answersTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(26, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Answers:";
+            this.label_answersTitle.AutoSize = true;
+            this.label_answersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_answersTitle.Location = new System.Drawing.Point(26, 160);
+            this.label_answersTitle.Name = "label_answersTitle";
+            this.label_answersTitle.Size = new System.Drawing.Size(69, 18);
+            this.label_answersTitle.TabIndex = 8;
+            this.label_answersTitle.Text = "Answers:";
+            // 
+            // label_reps
+            // 
+            this.label_reps.AutoSize = true;
+            this.label_reps.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_reps.ForeColor = System.Drawing.Color.Red;
+            this.label_reps.Location = new System.Drawing.Point(399, 35);
+            this.label_reps.Name = "label_reps";
+            this.label_reps.Size = new System.Drawing.Size(24, 25);
+            this.label_reps.TabIndex = 9;
+            this.label_reps.Text = "0";
+            // 
+            // label_repetitions
+            // 
+            this.label_repetitions.AutoSize = true;
+            this.label_repetitions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_repetitions.Location = new System.Drawing.Point(266, 39);
+            this.label_repetitions.Name = "label_repetitions";
+            this.label_repetitions.Size = new System.Drawing.Size(87, 20);
+            this.label_repetitions.TabIndex = 10;
+            this.label_repetitions.Text = "repetitions:";
+            // 
+            // label_correct_all
+            // 
+            this.label_correct_all.AutoSize = true;
+            this.label_correct_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_correct_all.Location = new System.Drawing.Point(446, 39);
+            this.label_correct_all.Name = "label_correct_all";
+            this.label_correct_all.Size = new System.Drawing.Size(81, 20);
+            this.label_correct_all.TabIndex = 11;
+            this.label_correct_all.Text = "correct/all:";
+            // 
+            // label_score
+            // 
+            this.label_score.AutoSize = true;
+            this.label_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_score.ForeColor = System.Drawing.Color.Red;
+            this.label_score.Location = new System.Drawing.Point(555, 35);
+            this.label_score.Name = "label_score";
+            this.label_score.Size = new System.Drawing.Size(42, 25);
+            this.label_score.TabIndex = 12;
+            this.label_score.Text = "0/0";
             // 
             // QuizWindow
             // 
@@ -113,17 +160,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(804, 441);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_score);
+            this.Controls.Add(this.label_correct_all);
+            this.Controls.Add(this.label_repetitions);
+            this.Controls.Add(this.label_reps);
+            this.Controls.Add(this.label_answersTitle);
             this.Controls.Add(this.checkedListBox_answers);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_menu);
+            this.Controls.Add(this.button_ok);
+            this.Controls.Add(this.label_question);
+            this.Controls.Add(this.label_titleQuestion);
             this.Controls.Add(this.label_tittle);
             this.Name = "QuizWindow";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuizWindow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuizWindow_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,11 +184,15 @@
         #endregion
 
         private System.Windows.Forms.Label label_tittle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label_titleQuestion;
+        private System.Windows.Forms.Label label_question;
+        private System.Windows.Forms.Button button_ok;
+        private System.Windows.Forms.Button button_menu;
         private System.Windows.Forms.CheckedListBox checkedListBox_answers;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_answersTitle;
+        private System.Windows.Forms.Label label_reps;
+        private System.Windows.Forms.Label label_repetitions;
+        private System.Windows.Forms.Label label_correct_all;
+        private System.Windows.Forms.Label label_score;
     }
 }

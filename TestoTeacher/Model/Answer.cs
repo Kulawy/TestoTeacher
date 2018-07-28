@@ -17,5 +17,10 @@ namespace TestoTeacher.Model
             IsCorrect = correction;
         }
 
+        public override string ToString()
+        {
+            return AnswerContent;
+        }
+
     }
 }

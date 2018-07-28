@@ -42,6 +42,7 @@ namespace TestoTeacher.View
         {
             if ( CheckValidation() )
             {
+                QuizImplementator();
                 this.Hide();
                 quizWindow = new QuizWindow(this);
                 quizWindow.Show();                
@@ -96,7 +97,10 @@ namespace TestoTeacher.View
         {
             if (questionProvider != null)
                 QuestionProvider.DeleteProvider();
-            questionProvider = QuestionProvider.GetInstance( fileUrl,System.Convert.ToInt32(textBox_repNumber));
+            QuestionProvider.Reps = System.Convert.ToInt32(textBox_repNumber.Text);
+            QuestionProvider.RepsWrong = System.Convert.ToInt32(textBox_repWrongNumber.Text);
+            QuestionProvider.FileURL = fileUrl;
+            questionProvider = QuestionProvider.GetInstance();
             
         }
 
