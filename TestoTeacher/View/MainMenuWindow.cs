@@ -54,7 +54,7 @@ namespace TestoTeacher.View
 
         private void button_resume_Click(object sender, EventArgs e)
         {
-            if ( quizWindow != null)
+            if ( questionProvider.questionsCount() > 0)
             {
                 this.Hide();
                 quizWindow.Show();

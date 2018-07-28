@@ -79,6 +79,7 @@ namespace TestoTeacher.Controler
             //string beginning = currentLine.Substring(0, 2);
             if (!currentLine.Equals(""))
             {
+                currentLine = currentLine.Trim();
                 char[] textArray = currentLine.ToCharArray();
                 int firsCharToNum = System.Convert.ToInt32(textArray[0]);
 
@@ -90,10 +91,17 @@ namespace TestoTeacher.Controler
                 else if ((firsCharToNum >= 97) && (firsCharToNum <= 105))
                 {
                     bool isCorect = false;
-                    if (textArray[textArray.Length - 1].Equals("+") && textArray[textArray.Length - 2].Equals("_"))
+                    if (textArray[textArray.Length - 1].Equals('+') && textArray[textArray.Length - 2].Equals('_'))
+                    {
                         isCorect = true;
-                    questionsList[questionsList.Count - 1].AddAnswer(currentLine.Substring(2), isCorect);
-
+                        questionsList[questionsList.Count - 1].AddAnswer(currentLine.Substring(2, (currentLine.Length - 4)), isCorect);
+                        
+                    }
+                    else
+                    {
+                        questionsList[questionsList.Count - 1].AddAnswer(currentLine.Substring(2), isCorect);
+                    }  
+                    
                 }
             }
 

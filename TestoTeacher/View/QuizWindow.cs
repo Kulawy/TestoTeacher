@@ -45,9 +45,23 @@ namespace TestoTeacher.View
         {
             checkTheAnswer(actualQuestion);
             checkToRemove(actualQuestion);
-            actualQuestion = questionProvider.getQuestion(rnd.Next(questionProvider.questionsCount() - 1));
-            checkedListBox_answers.Items.Clear();
-            fillContent(actualQuestion);
+            if (questionProvider.questionsCount() > 0)
+            {
+                //int myRandomInt = rnd.Next(questionProvider.questionsCount() - 1);
+                Question newQuestion = questionProvider.getQuestion(rnd.Next(questionProvider.questionsCount()));
+                if ((questionProvider.questionsCount() > 0) && newQuestion.Equals(actualQuestion)) {
+                     newQuestion = questionProvider.getQuestion(rnd.Next(questionProvider.questionsCount()));
+                }
+                actualQuestion = newQuestion;
+                checkedListBox_answers.Items.Clear();
+                fillContent(actualQuestion);
+            }
+            else
+            {
+                MessageBox.Show("Gratulations you Pass");
+                this.Close();
+            }
+                
             //actualQuestion = questionProvider.getQuestion(rnd.Next(questionProvider.questionsCount() - 1))
             //fillContent(actualQuestion);
         }
@@ -56,6 +70,11 @@ namespace TestoTeacher.View
         {
             if (mainMenu != null)
                 mainMenu.Show();
+        }
+
+        private void QuizWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
 
 
@@ -99,7 +118,7 @@ namespace TestoTeacher.View
             //dla wszystkich odpowidzi w liscie sprawdzam czy isCorrect równa sie zaznaczony.isChacked
             foreach (Answer a in checkedListBox_answers.Items)
             {
-                if ( a.IsCorrect  != ( checkedListBox_answers.GetItemChecked(checkedListBox_answers.Items.IndexOf(a)).Equals(CheckState.Checked) ? true : false))
+                if ( !(a.IsCorrect  == ( checkedListBox_answers.GetItemChecked(checkedListBox_answers.Items.IndexOf(a)))))
                 {
                     flag = false;
                 }

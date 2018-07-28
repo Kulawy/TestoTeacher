@@ -95,6 +95,7 @@
             // 
             this.checkedListBox_answers.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.checkedListBox_answers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox_answers.CheckOnClick = true;
             this.checkedListBox_answers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkedListBox_answers.FormattingEnabled = true;
             this.checkedListBox_answers.Location = new System.Drawing.Point(101, 160);
@@ -127,11 +128,11 @@
             // 
             this.label_repetitions.AutoSize = true;
             this.label_repetitions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_repetitions.Location = new System.Drawing.Point(266, 39);
+            this.label_repetitions.Location = new System.Drawing.Point(240, 39);
             this.label_repetitions.Name = "label_repetitions";
-            this.label_repetitions.Size = new System.Drawing.Size(87, 20);
+            this.label_repetitions.Size = new System.Drawing.Size(144, 20);
             this.label_repetitions.TabIndex = 10;
-            this.label_repetitions.Text = "repetitions:";
+            this.label_repetitions.Text = "question repetition:";
             // 
             // label_correct_all
             // 
